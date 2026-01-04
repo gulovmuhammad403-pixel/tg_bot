@@ -19,7 +19,7 @@ import asyncio
 
 # ---------- Танзимот ----------
 # Ба ҷои "YOUR_TOKEN_HERE" токени боти худро гузоред ё онро дар муҳити система (env) нигоҳ доред
-API_TOKEN = os.getenv("API_TOKEN", "8554249064:AAFp6nqmTFDzK8iGD4KCUwFLRvA0uoMbBJc")
+TOKEN = os.environ.get("BOT=TOKEN")
 # Ба ҷои @your_channel номи канали худро гузоред (бо @)
 CHANNEL_ID = os.getenv("CHANNEL_ID", "@m_soft_studio")
 
@@ -325,3 +325,4 @@ if __name__ == "__main__":
         executor.start_polling(dp, skip_updates=True, on_startup=on_startup, on_shutdown=on_shutdown)
     except (KeyboardInterrupt, SystemExit):
         logger.info("Stopped by user")
+
